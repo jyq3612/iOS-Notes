@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKR-ae-00l">
+                                <rect key="frame" x="40" y="80" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4MF-7N-Wc8"/>
+                                    <constraint firstAttribute="width" priority="10" constant="80" id="a0l-Mp-GXM"/>
+                                </constraints>
+                                <state key="normal" title="获取权限"/>
+                                <connections>
+                                    <action selector="isHealthDataAvailable" destination="BYZ-38-t0r" eventType="touchUpInside" id="kjk-4z-xZH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puq-T4-5SR">
+                                <rect key="frame" x="40" y="130" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2rQ-NV-wuo"/>
+                                    <constraint firstAttribute="width" priority="10" constant="80" id="VV9-TX-BWm"/>
+                                </constraints>
+                                <state key="normal" title="读取数据"/>
+                                <connections>
+                                    <action selector="getStepsFromHealthKit" destination="BYZ-38-t0r" eventType="touchUpInside" id="xSg-SS-5CG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTO-du-UeZ">
+                                <rect key="frame" x="40" y="180" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EpS-hT-pSg"/>
+                                    <constraint firstAttribute="width" priority="10" constant="80" id="Pvp-v1-zZK"/>
+                                </constraints>
+                                <state key="normal" title="写入数据"/>
+                                <connections>
+                                    <action selector="addstepWithStepNum" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1S-Wl-L1i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldQ-Wd-km6">
+                                <rect key="frame" x="112" y="134.5" width="10.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsm-6g-DA9">
+                                <rect key="frame" x="130" y="180" width="185" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ldQ-Wd-km6" firstAttribute="centerY" secondItem="Puq-T4-5SR" secondAttribute="centerY" id="0Zg-QQ-k2a"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ldQ-Wd-km6" secondAttribute="trailing" constant="20" id="4Nq-WL-2sq"/>
+                            <constraint firstItem="fsm-6g-DA9" firstAttribute="centerY" secondItem="cTO-du-UeZ" secondAttribute="centerY" id="68I-BB-nSQ"/>
+                            <constraint firstItem="JKR-ae-00l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="6qh-sg-L7n"/>
+                            <constraint firstItem="Puq-T4-5SR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Avl-tS-U7d"/>
+                            <constraint firstItem="Puq-T4-5SR" firstAttribute="top" secondItem="JKR-ae-00l" secondAttribute="bottom" constant="20" id="Gs0-PN-5k3"/>
+                            <constraint firstItem="JKR-ae-00l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Lna-IB-WrG"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JKR-ae-00l" secondAttribute="trailing" constant="20" id="bbr-PJ-1dq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fsm-6g-DA9" secondAttribute="trailing" constant="60" id="d8b-Wv-Xvr"/>
+                            <constraint firstItem="cTO-du-UeZ" firstAttribute="top" secondItem="Puq-T4-5SR" secondAttribute="bottom" constant="20" id="kWg-Tp-KBY"/>
+                            <constraint firstItem="fsm-6g-DA9" firstAttribute="leading" secondItem="cTO-du-UeZ" secondAttribute="trailing" constant="10" id="oW2-ae-yQJ"/>
+                            <constraint firstItem="ldQ-Wd-km6" firstAttribute="leading" secondItem="Puq-T4-5SR" secondAttribute="trailing" constant="10" id="qCR-Xe-6dX"/>
+                            <constraint firstItem="cTO-du-UeZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="tzZ-28-I9t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="stepNumberLabel" destination="ldQ-Wd-km6" id="PJb-aB-ADu"/>
+                        <outlet property="stepNumberTextfield" destination="fsm-6g-DA9" id="XRn-bq-NIk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -9,7 +9,13 @@ Foundation框架中有3个本身支持弱引用的容器：
 >
 >3、NSPointerArray-对应NSMutebleArray
 
-这3个容器本身都是可变的，没有不可变父类。其共同点是addObject方法参数声明为nullable即不用判断是否为nil来避免崩溃，而且若存储对象释放后，不用手动移除，对象的弱引用会自动从容器中移除。且都拥有初始化方法- (instancetype)initWithOptions:(NSPointerFunctionsOptions)options，options代表其所支持的放入对象的指针管理选项。 
+这3个容器本身都是可变的，没有不可变父类。	
+其共同点是addObject方法参数声明为nullable即不用判断是否为nil来避免崩溃，而且若存储对象释放后，不用手动移除，对象的弱引用会自动从容器中移除。	
+
+且都拥有初始化方法- (instancetype)initWithOptions:(NSPointerFunctionsOptions)options，options代表其所支持的放入对象的指针管理选项。可以指定弱指针。还可以指定是否添加成员变量的时候复制成员。
+
+	
+可以随意的存储指针并且利用指针的唯一性来进行hash同一性检查（检查成员变量是否有重复）和对比操作（equal）。
 
 <注意>测试发现，对象释放后，容器中的对象引用会移除，但count貌似不对😳，暂时不清楚为啥。
 

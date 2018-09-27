@@ -6,7 +6,4 @@ target 'RealmObject' do
   # use_frameworks!
 
   # Pods for RealmObject
-pod 'Realm'
-pod 'FLEX', '~> 2.0', :configurations => ['Debug']
-
 end

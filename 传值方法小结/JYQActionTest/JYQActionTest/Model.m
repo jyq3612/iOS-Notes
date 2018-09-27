@@ -27,7 +27,7 @@
 
 - (NSHashTable<ModelStateUpdate> *)displayers {
     if (!_displayers) {
-        _displayers = [NSHashTable weakObjectsHashTable];
+        _displayers = (NSHashTable<ModelStateUpdate> *)[NSHashTable weakObjectsHashTable];
     }
     return _displayers;
 }

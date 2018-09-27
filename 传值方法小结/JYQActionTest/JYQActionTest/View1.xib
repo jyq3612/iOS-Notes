@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,8 +17,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrL-sj-Sak">
-                    <rect key="frame" x="74.5" y="38.5" width="52" height="30"/>
-                    <state key="normal" title="Button1"/>
+                    <rect key="frame" x="29.5" y="38.5" width="82" height="30"/>
+                    <state key="normal" title="xib关联事件"/>
                     <connections>
                         <action selector="xibButtonFirstResponder:" destination="-2" eventType="touchUpInside" id="joT-ag-WNV"/>
                     </connections>
@@ -30,8 +30,8 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJr-B0-yHO">
-                    <rect key="frame" x="173.5" y="38" width="55" height="30"/>
-                    <state key="normal" title="Button2"/>
+                    <rect key="frame" x="141.5" y="38.5" width="138" height="30"/>
+                    <state key="normal" title="代码关联响应链事件"/>
                     <connections>
                         <action selector="button2Tapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="kaz-ps-B3N"/>
                     </connections>
@@ -41,8 +41,8 @@
             <constraints>
                 <constraint firstItem="9GQ-Kz-SYA" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="2S0-2T-zWj"/>
                 <constraint firstItem="jJr-B0-yHO" firstAttribute="centerY" secondItem="QrL-sj-Sak" secondAttribute="centerY" id="L8o-Le-FSj"/>
-                <constraint firstItem="jJr-B0-yHO" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="50" id="Ybm-dH-HLb"/>
-                <constraint firstItem="QrL-sj-Sak" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-50" id="aB1-Yf-HST"/>
+                <constraint firstItem="jJr-B0-yHO" firstAttribute="leading" secondItem="QrL-sj-Sak" secondAttribute="trailing" constant="30" id="Yr1-Zp-QpE"/>
+                <constraint firstItem="QrL-sj-Sak" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-80" id="aB1-Yf-HST"/>
                 <constraint firstItem="QrL-sj-Sak" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="15" id="cLM-4m-edb"/>
                 <constraint firstItem="9GQ-Kz-SYA" firstAttribute="centerY" secondItem="QrL-sj-Sak" secondAttribute="centerY" constant="-30" id="fES-UG-q2I"/>
             </constraints>
